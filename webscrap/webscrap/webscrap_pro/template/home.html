@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form class="form-label" method="post">
+                {% csrf_token %}
+                <div class="input-group">
+                    <input type="text" class="form-control" name="gl" placeholder="Enter your link here">
+                    <div class="input-group-append">
+                        <button class="btn btn-warning" type="submit">Search</button>
+                        <button class="btn btn-danger" type="reset">Clear</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Link</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in b %}
+    <tr>
+
+      <td>{{i.id}}</td>
+      <td>{{i.name}}</td>
+      <td>{{i.lin}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+</body>
+</html>
