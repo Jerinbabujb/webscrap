@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-69lgh&4^)en^=d%6c41rgk!s&5r84ls)b2sa)@$d0b*dtm^j0#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://webscrap-lsec.onrender.com"]
+ALLOWED_HOSTS = ["webscrap-lsec.onrender.com"]
 
 
 # Application definition
